@@ -8,18 +8,9 @@
 </head>
 <body>
     {% if user.is_authenticated %}
-        hello {{ user.profileperson.first_name }} 
-        <br>you birth day is: {{ user.profileperson.birth_date }}
-        <br>location: {{user.profileperson.location}}
+        hello {{ user.username }}
         <br><a href="{% url 'url_logout' %}">Logout</a>
-        <br> <br> <br><br>
-        <a href="{% url 'url_update_profile' %}">Sou psicologo</a>
     {% else %}
         <a href="{% url 'url_login' %}">Login</a>
-        <br> <br> <br><br>
-        <a href="{% url 'url_signup' %}">Sign up</a>
-        
-
-
     {% endif %}
 </body>
