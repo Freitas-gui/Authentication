@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+</head>
+<body>
+     {% if user.is_authenticated %}
+        <h1>cadastro de psicologo confirmado</h1>
+        hello {{ user.profileperson.first_name }} 
+        <br>bio: {{ user.profileperson.bio }}
+        <br>crp: {{ user.profileperson.crp }}
+    {% endif %}
+</body>
